@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('reserves', function (Blueprint $table) {
             $table->id();
+            $table->integer('numPersones');
+            $table->date('dataReserva');
             $table->timestamps();
         });
     }
