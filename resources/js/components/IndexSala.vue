@@ -19,12 +19,12 @@
                     <!-- Modal body -->
                     <div class="modal-body">
                         <div class="my-4">
-                            <label for="numSala">Num Sala</label>
-                            <input v-model="sala.numSala" type="number" class="form-control" id="numSala" placeholder="">
+                            <label for="numSala">Nom Sala</label>
+                            <input v-model="sala.nomSala" type="text" class="form-control" id="nomSala" placeholder="">
                         </div>
                         <div class="my-4">
-                            <label for="salaOcupada">Sala Ocupada</label>
-                            <input v-model="sala.salaOcupada" type="number" class="form-control" id="salaOcupada" placeholder="">
+                            <label for="salaOcupada">Número Màxim Persones</label>
+                            <input v-model="sala.numMaxPersones" type="number" class="form-control" id="numMaxPersones" placeholder="">
                         </div>
                     </div>
 
@@ -46,16 +46,16 @@
             <thead class="thead-dark">
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Num Sala</th>
-                <th scope="col">Sala Ocupada</th>
+                <th scope="col">Nom Sala</th>
+                <th scope="col">Num Maxim de Persones</th>
                 <th scope="col" colspan="2" class="text-center">Accion</th>
             </tr>
             </thead>
             <tbody>
             <tr v-for="s in sales">
                 <th scope="row">{{ s.id }}</th>
-                <td>{{ s.numSala }}</td>
-                <td>{{ s.salaOcupada }}</td>
+                <td>{{ s.nomSala }}</td>
+                <td>{{ s.numMaxPersones }}</td>
                 <td>
                     <button  @click="modificar=true; abrirModal(s);" class="btn btn-warning">Editar</button>
                 </td>
@@ -75,8 +75,8 @@ export default {
     data() {
         return {
             sala:{
-                numSala:0,
-                salaOcupada:0,
+                nomSala:'',
+                numMaxPersones:'',
             },
             id:0,
             modificar:true,
@@ -111,13 +111,13 @@ export default {
             if(this.modificar){
                 this.id=data.id;
                 this.tituloModal="Edita Sala";
-                this.sala.numSala=data.numSala;
-                this.sala.salaOcupada=data.salaOcupada;
+                this.sala.nomSala=data.nomSala;
+                this.sala.numMaxPersones=data.numMaxPersones;
             }else{
                 this.id=0;
                 this.tituloModal="Crear Sala";
-                this.sala.numSala=1;
-                this.sala.salaOcupada=1;
+                this.sala.nomSala='';
+                this.sala.numMaxPersones='';
             }
         },
         cerrarModal(){

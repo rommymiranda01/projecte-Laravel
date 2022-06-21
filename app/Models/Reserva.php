@@ -9,7 +9,24 @@ class Reserva extends Model
 {
     use HasFactory;
     protected $fillable = [
-      'numPersones',
-      'dataReserva',
+      'nom',
+      'correu',
+      'telefon',
+      'pais',
+      'data',
+      'id_joc',
+      'accept',
     ];
+
+    //protected $table = 'reservas';
+
+//    public function user()
+//    {
+//        $this->belongsTo(User::class);
+//    }
+
+    public function joc()
+    {
+        $this->belongsTo(Joc::class);
+    }
 }

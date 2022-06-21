@@ -9,7 +9,14 @@ class Sala extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'numSala',
-        'salaOcupada',
+        'nomSala',
+        'numMaxPersones',
     ];
+
+    //protected $table = 'salas';
+
+    public function joc()
+    {
+        $this->hasMany(Joc::class);
+    }
 }

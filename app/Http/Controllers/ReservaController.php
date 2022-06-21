@@ -11,7 +11,7 @@ class ReservaController extends Controller
         if ($request->ajax()){
             return Reserva::all();
         }else{
-            return view('reserva.indexReserves');
+            return view('reserves.indexReserves');
         }
     }
 
@@ -31,5 +31,9 @@ class ReservaController extends Controller
 
     public function destroy(Reserva $reserva){
         $reserva->delete();
+    }
+
+    public function comprovaReserva(){
+        return view('reserves.comprovaReserva');
     }
 }

@@ -16,7 +16,10 @@ return new class extends Migration
         Schema::create('jocs', function (Blueprint $table) {
             $table->id();
             $table->string('nom');
-            $table->string('numJugadors');
+            $table->string('durada');
+            $table->string('foto')->nullable();
+            $table->bigInteger('id_sala')->unsigned();
+            $table->foreign('id_sala')->references('id')->on('salas');
             $table->rememberToken();
             $table->timestamps();
         });

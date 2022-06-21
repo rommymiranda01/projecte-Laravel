@@ -19,8 +19,8 @@ class SalaFactory extends Factory
     {
         return [
             //
-            'numSala' => $this->faker->randomNumber(),
-            'salaOcupada' => $this->faker->boolean,
+            'nomSala' => $this->faker->name(),
+            'numMaxPersones' => $this->faker->randomNumber(),
             'remember_token' => Str::random(10),
         ];
     }

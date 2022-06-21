@@ -11,7 +11,7 @@ class VoucherController extends Controller
         if ($request->ajax()){
             return Voucher::all();
         }else{
-            return view('voucher.IndexVoucher');
+            return view('vouchers.IndexVouchers');
         }
     }
 

@@ -20,7 +20,9 @@ class JocFactory extends Factory
         return [
             //
             'nom' => $this->faker->name(),
-            'numJugadors' => $this->faker->name(),
+            'durada' => $this->faker->randomNumber(),
+            'foto' => $this->faker->name(),
+            'id_sala' => $this->faker->randomNumber(),
             'remember_token' => Str::random(10),
         ];
     }

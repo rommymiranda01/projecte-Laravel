@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('salas', function (Blueprint $table) {
             $table->id();
-            $table->integer('numSala');
-            $table->boolean('salaOcupada');
+            $table->string('nomSala');
+            $table->integer('numMaxPersones');
             $table->rememberToken();
             $table->timestamps();
         });

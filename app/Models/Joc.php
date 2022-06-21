@@ -10,6 +10,18 @@ class Joc extends Model
     use HasFactory;
     protected $fillable = [
         'nom',
-        'numJugadors',
+        'durada',
+        'foto',
+        'id_sala',
     ];
+
+    public function sala()
+    {
+        $this->belongsTo(Sala::class);
+    }
+
+    public function reserva()
+    {
+        $this->hasMany(Reserva::class);
+    }
 }

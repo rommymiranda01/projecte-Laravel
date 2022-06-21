@@ -27,9 +27,9 @@ Vue.component('jocs', require('./components/IndexJoc.vue').default);
 
 Vue.component('reserves', require('./components/IndexReserva.vue').default);
 
-Vue.component('vouchers', require('./components/IndexVoucher.vue').default);
+Vue.component('comprova-reserva', require('./components/ComprovaReservaComponent.vue').default);
 
-Vue.component('experiencies', require('./components/IndexExperiencia.vue').default);
+Vue.component('carousel', require('./components/Carousel.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

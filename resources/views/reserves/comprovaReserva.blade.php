@@ -2,8 +2,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <vouchers/>
+            <comprova-reserva></comprova-reserva>
         </div>
     </div>
-{{--    <script src="{{ asset('js/app.js') }}" ></script>--}}
 @endsection

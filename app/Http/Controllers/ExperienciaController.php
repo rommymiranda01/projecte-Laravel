@@ -7,12 +7,9 @@ use Illuminate\Http\Request;
 
 class ExperienciaController extends Controller
 {
-    public function index(Request $request){
-        if ($request->ajax()){
-            return Experiencia::all();
-        }else{
-            return view('experiencia.indexExperiencia');
-        }
+    public function index(){
+        $experiencies = Experiencia::all();
+        return view('experiencies.indexExperiencies', ['experiencies'=>$experiencies]);
     }
 
     public function show(Experiencia $experiencia)

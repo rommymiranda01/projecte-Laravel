@@ -19,8 +19,13 @@ class ReservaFactory extends Factory
     {
         return [
             //
-            'numPersones' => $this->faker->randomNumber(),
-            'dataReserva' => $this->faker->date,
+            'nom' => $this->faker->name,
+            'correu' => $this->faker->name,
+            'telefon' => $this->faker->name,
+            'pais' => $this->faker->name,
+            'data' => $this->faker->date,
+            'id_joc' => $this->faker->randomNumber(),
+            'accept' => $this->faker->boolean,
             'remember_token' => Str::random(10),
         ];
     }

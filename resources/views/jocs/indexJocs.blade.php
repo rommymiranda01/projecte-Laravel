@@ -2,7 +2,8 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <jocs/>
+            <jocs></jocs>
         </div>
     </div>
+{{--    <script src="{{ asset('js/app.js') }}" ></script>--}}
 @endsection

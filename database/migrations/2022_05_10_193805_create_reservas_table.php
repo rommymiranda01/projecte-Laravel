@@ -15,8 +15,14 @@ return new class extends Migration
     {
         Schema::create('reservas', function (Blueprint $table) {
             $table->id();
-            $table->integer('numPersones');
-            $table->date('dataReserva');
+            $table->string('nom');
+            $table->string('correu');
+            $table->string('telefon');
+            $table->string('pais');
+            $table->dateTime('data');
+            $table->bigInteger('id_joc')->unsigned();
+            $table->foreign('id_joc')->references('id')->on('jocs');
+            $table->boolean('accept')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reserves');
+        Schema::dropIfExists('reservas');
     }
 };

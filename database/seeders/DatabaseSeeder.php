@@ -16,14 +16,21 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-        //\App\Models\Sala::factory(1)->create();
         $user = new User();
         $user->name='admin';
         $user->password=Hash::make('admin');
         $user->email='admin@admin.com';
         $user->rol='admin';
-
+        $user->dni = '87654321Q';
         $user->save();
+
+
+        $empleat = new User();
+        $empleat->name='empleat1';
+        $empleat->password=Hash::make('123456');
+        $empleat->email='empleat1@empleat1.com';
+        $empleat->rol='empleat';
+        $empleat->dni='12345678Q';
+        $empleat->save();
     }
 }
